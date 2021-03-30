@@ -3,14 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 3000",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt-ts generate",
+    "base_login": "firebase login --no-localhost",
+    "base_init": "firebase init",
+    "base_deploy": "firebase deploy"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "firebase": "^8.3.1",
+    "firebase-tools": "^9.8.0",
+    "nuxt": "^2.15.3",
+    "nuxt-property-decorator": "^2.9.1",
+    "vue-class-component": "^7.2.6",
+    "vue-loading-template": "^1.3.2",
+    "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3"
