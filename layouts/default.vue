@@ -1,19 +1,16 @@
 <template>
   <v-app>
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar :clipped-left="clipped" fixed app flat height="96" color="white">
       <v-toolbar-title v-text="title" class="title-text" />
       <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <v-footer class="d-flex justify-center" :absolute="!fixed" app color="accent" height="72">
+      <span class="footer-text">&copy; {{ new Date().getFullYear() }}. All rights reserved.</span>
     </v-footer>
   </v-app>
 </template>
@@ -24,6 +21,11 @@
 .title-text {
   font-size: 28px;
   padding-left: 24px;
+}
+
+.footer-text{
+  font-size: 16px;
+  color: $gray;
 }
 </style>
 
