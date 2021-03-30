@@ -21,7 +21,7 @@
 <style scoped lang="scss">
 @import "@/assets/scss/_imports.scss";
 
-.title-text{
+.title-text {
   font-size: 28px;
   padding-left: 24px;
 }
