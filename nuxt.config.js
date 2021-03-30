@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "性格診断テスト",
+    titleTemplate: "流されチェックテスト",
     title: "checktest",
     htmlAttrs: {
       lang: "en",
