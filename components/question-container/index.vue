@@ -345,14 +345,14 @@ export default {
           }
         })
       );
-      if(this.count > 9){
-        this.$router.push('/answer/1')
-        return
-      }else if(this.count > 5){
-        this.$router.push('/answer/2')
-        return
+      if (this.count > 9) {
+        this.$router.push("/answer/1");
+        return;
+      } else if (this.count > 5) {
+        this.$router.push("/answer/2");
+        return;
       }
-      this.$router.push('/answer/3')
+      this.$router.push("/answer/3");
     },
     back() {
       if (this.step <= 0) {

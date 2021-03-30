@@ -30,86 +30,83 @@
           <div class="text-center">
             <div>
               <div class="head-text">結果は以下の通りです</div>
-                <div v-if="this.$route.params.id === '1'">
-                  <v-card
-                  class="mx-auto result-card"
-                >
+              <div v-if="this.$route.params.id === '1'">
+                <v-card class="mx-auto result-card">
                   <v-img
                     class="white--text align-end"
                     height="400px"
                     :src="safeImg"
                   >
-                    <v-card-title class="title-text">あなたは大丈夫です</v-card-title>
+                    <v-card-title class="title-text"
+                      >あなたは大丈夫です</v-card-title
+                    >
                   </v-img>
                   <v-card-text class="text--primary">
-                    <div class="d-flex justify-center content-text">自信を持って流されてください。</div>
+                    <div class="d-flex justify-center content-text">
+                      自信を持って流されてください。
+                    </div>
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn
-                      color="blue"
-                      text
-                      to="/"
-                    >
-                      もう一度診断する
-                    </v-btn>
+                    <v-btn color="blue" text to="/"> もう一度診断する </v-btn>
                   </v-card-actions>
                 </v-card>
-                </div>
-                <div v-else-if="this.$route.params.id === '2'">
-                  <v-card
-                  class="mx-auto result-card"
-                >
+              </div>
+              <div v-else-if="this.$route.params.id === '2'">
+                <v-card class="mx-auto result-card">
                   <v-img
                     class="white--text align-end"
                     height="400px"
                     :src="nutImg"
                   >
-                    <v-card-title class="title-text">あなたは注意してください</v-card-title>
+                    <v-card-title class="title-text"
+                      >あなたは注意してください</v-card-title
+                    >
                   </v-img>
                   <v-card-text class="text--primary">
-                    <div class="d-flex justify-center content-text" v-text="`どうしてもやりたい事なら、\nやってみても良いかもしれません。`"></div>
+                    <div
+                      class="d-flex justify-center content-text"
+                      v-text="
+                        `どうしてもやりたい事なら、\nやってみても良いかもしれません。`
+                      "
+                    ></div>
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn
-                      color="#315850"
-                      text
-                      to="/"
-                    >
+                    <v-btn color="#315850" text to="/">
                       もう一度診断する
                     </v-btn>
                   </v-card-actions>
                 </v-card>
-                </div>
-                <div v-else>
-                  <v-card
-                  class="mx-auto result-card"
-                >
+              </div>
+              <div v-else>
+                <v-card class="mx-auto result-card">
                   <v-img
                     class="white--text align-end"
                     height="400px"
                     :src="dangerImg"
                   >
-                    <v-card-title class="title-text">あなたは<span class="danger-text">危険</span>です</v-card-title>
+                    <v-card-title class="title-text"
+                      >あなたは<span class="danger-text">危険</span
+                      >です</v-card-title
+                    >
                   </v-img>
                   <v-card-text class="text--primary">
-                    <div class="d-flex justify-center content-text" v-text="`今はタイミングじゃないので、\nやめておきましょう。`"></div>
+                    <div
+                      class="d-flex justify-center content-text"
+                      v-text="
+                        `今はタイミングじゃないので、\nやめておきましょう。`
+                      "
+                    ></div>
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn
-                      color="red"
-                      text
-                      to="/"
-                    >
-                      もう一度診断する
-                    </v-btn>
+                    <v-btn color="red" text to="/"> もう一度診断する </v-btn>
                   </v-card-actions>
                 </v-card>
-                </div>
+              </div>
             </div>
           </div>
         </v-col>
       </v-row>
-      </div>
+    </div>
   </div>
 </template>
 
@@ -188,16 +185,16 @@
   }
 }
 
-.result-card{
+.result-card {
   margin-bottom: 64px;
 }
 
-.title-text{
+.title-text {
   font-size: 28px;
   font-weight: 700;
 }
 
-.content-text{
+.content-text {
   font-size: 24px;
   padding: 2em 0;
   white-space: pre-line;
@@ -207,7 +204,7 @@
   }
 }
 
-.danger-text{
+.danger-text {
   color: $red;
 }
 </style>
@@ -220,7 +217,7 @@ export default {
       loading: true,
       safeImg: require("@/assets/img/img_1.jpg"),
       nutImg: require("@/assets/img/img_2.jpg"),
-      dangerImg: require("@/assets/img/img_3.jpg")
+      dangerImg: require("@/assets/img/img_3.jpg"),
     };
   },
   methods: {
