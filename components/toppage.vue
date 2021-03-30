@@ -1,18 +1,13 @@
 <template>
-  <div>
-    <loading-view v-show="loading" />
-    <div v-show="!loading">
-      <v-layout wrap>
+  <v-layout wrap>
         <figure class="relative">
           <img
             src="~/assets/img/top_3.jpg"
             class="headerImage"
-            v-on:load="load"
           />
           <img
             src="~/assets/img/top_4.jpg"
             class="headerImage-sp"
-            v-on:load="load"
           />
           <figcaption class="absolute-text">
             <p class="jpn-text">性格診断テスト</p>
@@ -21,21 +16,6 @@
           </figcaption>
         </figure>
       </v-layout>
-    </div>
-    <div class="d-flex">
-      <v-divider></v-divider>
-    </div>
-    <div style="margin-bottom: 40px"></div>
-    <v-row justify="center" align="center">
-      <v-col cols="12" sm="8" md="6">
-        <div class="text-center">
-          <div>
-            <span class="head-text">以下の質問に正直にお答えください。</span>
-          </div>
-        </div>
-      </v-col>
-    </v-row>
-  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -100,38 +80,4 @@
   letter-spacing: 0.5em;
   text-align: right;
 }
-
-.head-text{
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  @include mq-down() {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
-}
 </style>
-
-<script>
-export default {
-  data() {
-    return {
-      visible: false,
-      loading: true,
-    };
-  },
-  methods: {
-    handleScroll() {
-      if (!this.visible) {
-        var top = this.$el.getBoundingClientRect().top;
-        this.visible = top < window.innerHeight + 300;
-      }
-    },
-    load() {
-      setTimeout(() => {
-        this.loading = false;
-      }, 1000);
-    },
-  },
-};
-</script>

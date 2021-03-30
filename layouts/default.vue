@@ -31,6 +31,9 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   padding-left: 24px;
+  @include mq-down() {
+    font-size: 24px;
+  }
 }
 
 .footer-text {

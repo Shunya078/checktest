@@ -3,8 +3,8 @@
     <div class="fullview">
       <div class="loading-spacer"></div>
       <vue-loading
-        type="spiningDubbles"
-        color="#aaa"
+        type="cylon"
+        color="#55ba66"
         :size="{ width: '100px', height: '100px' }"
       >
       </vue-loading>
