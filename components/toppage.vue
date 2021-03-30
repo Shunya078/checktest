@@ -1,21 +1,15 @@
 <template>
   <v-layout wrap>
-        <figure class="relative">
-          <img
-            src="~/assets/img/top_3.jpg"
-            class="headerImage"
-          />
-          <img
-            src="~/assets/img/top_4.jpg"
-            class="headerImage-sp"
-          />
-          <figcaption class="absolute-text">
-            <p class="jpn-text">性格診断テスト</p>
-            <br />
-            <p class="eng-text">Personality diagnostic test</p>
-          </figcaption>
-        </figure>
-      </v-layout>
+    <figure class="relative">
+      <img src="~/assets/img/top_3.jpg" class="headerImage" />
+      <img src="~/assets/img/top_4.jpg" class="headerImage-sp" />
+      <figcaption class="absolute-text">
+        <p class="jpn-text">性格診断テスト</p>
+        <br />
+        <p class="eng-text">Personality diagnostic test</p>
+      </figcaption>
+    </figure>
+  </v-layout>
 </template>
 
 <style lang="scss" scoped>

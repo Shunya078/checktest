@@ -101,7 +101,7 @@
   text-align: right;
 }
 
-.head-text{
+.head-text {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.25em;
