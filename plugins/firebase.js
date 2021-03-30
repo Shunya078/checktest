@@ -7,7 +7,7 @@ const firebaseConfig = {
   storageBucket: "yuji-checktest.appspot.com",
   messagingSenderId: "52407913484",
   appId: "1:52407913484:web:a9d03154e8fca19a723229",
-  measurementId: "G-70JL9E6379"
+  measurementId: "G-70JL9E6379",
 };
 
 if (!firebase.apps.length) {
