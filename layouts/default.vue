@@ -53,10 +53,10 @@ export default {
       title: "流されチェックテスト",
     };
   },
-  methods:{
-    toTop(){
-      this.$router.push("/")
-    }
-  }
+  methods: {
+    toTop() {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
