@@ -28,6 +28,8 @@
 
 .title-text {
   font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   padding-left: 24px;
 }
 
