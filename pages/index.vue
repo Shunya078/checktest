@@ -1,93 +1,111 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <div>
+    <loading-view v-show="loading" />
+    <div v-show="!loading">
+      <v-layout wrap>
+        <figure class="relative">
+            <img
+              src="~/assets/img/top_3.jpg"
+              class="headerImage"
+              v-on:load="load"
+            />
+            <img
+              src="~/assets/img/top_4.jpg"
+              class="headerImage-sp"
+              v-on:load="load"
+            />
+          <figcaption class="absolute-text"><p class="jpn-text">性格診断テスト</p>
+          <br><p class="eng-text">Personality diagnostic test</p></figcaption>
+        </figure>
+      </v-layout>
+    </div>
+  </div>
 </template>
 
-<script>
-import Logo from "~/components/Logo.vue";
-import VuetifyLogo from "~/components/VuetifyLogo.vue";
+<style lang="scss" scoped>
+@import "@/assets/scss/_imports.scss";
 
+.headerImage {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  @include mq-down() {
+    display: none;
+  }
+}
+
+.headerImage-sp {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  @include mq-up() {
+    display: none;
+  }
+  @include mq-down() {
+    display: relative;
+  }
+}
+
+.relative {
+  position: relative;
+}
+.absolute-text {
+  position: absolute;
+  right: 0;
+  bottom: 150px;
+  color: #fff;
+  background: rgba(0,0,0,.25);
+  width: 50%;
+  padding: 2em 1em 1em 0;
+  line-height: 24px;
+  @include mq-down() {
+    bottom: 0;
+    width: 100%;
+    line-height: 20px;
+    padding: 2em 0 0.5em 0;
+  }
+}
+.jpn-text {
+  margin: 0;
+  padding: 0 0.8em;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-align: right;
+  @include mq-down() {
+    font-size: 28px;
+  }
+}
+.eng-text{
+  margin: 0;
+  padding: 0 2em;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-align: right;
+}
+</style>
+
+<script>
 export default {
-  components: {
-    Logo,
-    VuetifyLogo,
+  data() {
+    return {
+      visible: false,
+      loading: true,
+    };
   },
-};
+  methods: {
+    handleScroll() {
+      if (!this.visible) {
+        var top = this.$el.getBoundingClientRect().top;
+        this.visible = top < window.innerHeight + 300;
+      }
+    },
+    load() {
+      setTimeout(() => {
+        this.loading = false;
+      }, 1000);
+    },
+  }
+}
 </script>
