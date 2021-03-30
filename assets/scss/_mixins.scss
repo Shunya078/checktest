@@ -73,3 +73,20 @@ $breakpoint-down: (
     @content;
   }
 }
+
+
+@mixin vertical-gap($gap) {
+  > *:not(:last-child) {
+    margin-bottom: $gap;
+  }
+}
+
+@mixin flex-vertical($align: center, $gap: 0) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: $align;
+  flex-shrink: 0;
+
+  @include vertical-gap($gap);
+  @content;
+}

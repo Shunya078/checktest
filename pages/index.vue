@@ -21,20 +21,21 @@
           </figcaption>
         </figure>
       </v-layout>
-    </div>
     <div class="d-flex">
       <v-divider></v-divider>
     </div>
     <div style="margin-bottom: 40px"></div>
     <v-row justify="center" align="center">
-      <v-col cols="12" sm="8" md="6">
+      <v-col cols="12" sm="10" md="8">
         <div class="text-center">
           <div>
-            <span class="head-text">以下の質問に正直にお答えください。</span>
+            <div class="head-text">以下の質問に正直にお答えください</div>
+            <question-container />
           </div>
         </div>
       </v-col>
     </v-row>
+    </div>
   </div>
 </template>
 
@@ -105,9 +106,11 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.25em;
+  padding-bottom: 2em;
   @include mq-down() {
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 0.1em;
+      padding-bottom: 1em;
   }
 }
 </style>
