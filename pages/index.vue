@@ -4,18 +4,21 @@
     <div v-show="!loading">
       <v-layout wrap>
         <figure class="relative">
-            <img
-              src="~/assets/img/top_3.jpg"
-              class="headerImage"
-              v-on:load="load"
-            />
-            <img
-              src="~/assets/img/top_4.jpg"
-              class="headerImage-sp"
-              v-on:load="load"
-            />
-          <figcaption class="absolute-text"><p class="jpn-text">性格診断テスト</p>
-          <br><p class="eng-text">Personality diagnostic test</p></figcaption>
+          <img
+            src="~/assets/img/top_3.jpg"
+            class="headerImage"
+            v-on:load="load"
+          />
+          <img
+            src="~/assets/img/top_4.jpg"
+            class="headerImage-sp"
+            v-on:load="load"
+          />
+          <figcaption class="absolute-text">
+            <p class="jpn-text">性格診断テスト</p>
+            <br />
+            <p class="eng-text">Personality diagnostic test</p>
+          </figcaption>
         </figure>
       </v-layout>
     </div>
@@ -54,7 +57,7 @@
   right: 0;
   bottom: 150px;
   color: #fff;
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, 0.25);
   width: 50%;
   padding: 2em 1em 1em 0;
   line-height: 24px;
@@ -76,7 +79,7 @@
     font-size: 28px;
   }
 }
-.eng-text{
+.eng-text {
   margin: 0;
   padding: 0 2em;
   font-size: 16px;
@@ -106,6 +109,6 @@ export default {
         this.loading = false;
       }, 1000);
     },
-  }
-}
+  },
+};
 </script>
