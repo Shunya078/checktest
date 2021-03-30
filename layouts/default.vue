@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar :clipped-left="clipped" fixed app flat height="96" color="white">
-      <v-toolbar-title v-text="title" class="title-text" />
+      <v-toolbar-title v-text="title" class="title-text" @click="toTop()" />
       <v-spacer />
     </v-app-bar>
     <v-main>
@@ -50,8 +50,13 @@ export default {
       drawer: false,
       fixed: false,
       miniVariant: false,
-      title: "性格診断テスト",
+      title: "流されチェックテスト",
     };
+  },
+  methods: {
+    toTop() {
+      this.$router.push("/");
+    },
   },
 };
 </script>

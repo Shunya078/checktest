@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "性格診断テスト",
+    titleTemplate: "流されチェックテスト",
     title: "checktest",
     htmlAttrs: {
       lang: "en",
@@ -39,7 +39,11 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ["~/assets/scss/_imports.scss"],
+    customVariables: ["~/assets/scss/_vuetify-variables.scss"],
+    treeShake: true,
+    options: {
+      customProperties: true,
+    },
     theme: {
       dark: false,
       themes: {

@@ -15,9 +15,9 @@
             v-on:load="load"
           />
           <figcaption class="absolute-text">
-            <p class="jpn-text">性格診断テスト</p>
+            <p class="jpn-text">流されチェックテスト</p>
             <br />
-            <p class="eng-text">Personality diagnostic test</p>
+            <p class="eng-text">Personality Diagnostic Test</p>
           </figcaption>
         </figure>
       </v-layout>
@@ -85,12 +85,12 @@
 .jpn-text {
   margin: 0;
   padding: 0 0.8em;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.25em;
   text-align: right;
   @include mq-down() {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 .eng-text {
@@ -116,6 +116,8 @@
 </style>
 
 <script>
+import firebase from "firebase";
+
 export default {
   data() {
     return {

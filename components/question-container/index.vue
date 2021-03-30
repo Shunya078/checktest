@@ -191,7 +191,7 @@
 }
 
 .button {
-  color: $white;
+  color: #fff;
   font-weight: 700;
   font-size: 18px;
 }
@@ -316,7 +316,7 @@ export default {
   },
   computed: {
     validateCheckbox() {
-      return [this.selectedValues.length > 6 || "選択肢を選んでください"];
+      return [this.selectedValues.length > 0 || "選択肢を選んでください"];
     },
   },
   watch: {
@@ -345,11 +345,14 @@ export default {
           }
         })
       );
-      if (this.count > 5) {
+      if (this.count > 9) {
         this.$router.push("/answer/1");
         return;
+      } else if (this.count > 5) {
+        this.$router.push("/answer/2");
+        return;
       }
-      this.$router.push("/answer/2");
+      this.$router.push("/answer/3");
     },
     back() {
       if (this.step <= 0) {
