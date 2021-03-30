@@ -191,7 +191,7 @@
 }
 
 .button {
-  color: $white;
+  color: #fff;
   font-weight: 700;
   font-size: 18px;
 }
