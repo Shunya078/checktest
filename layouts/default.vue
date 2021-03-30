@@ -9,8 +9,16 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer class="d-flex justify-center" :absolute="!fixed" app color="accent" height="72">
-      <span class="footer-text">&copy; {{ new Date().getFullYear() }}. All rights reserved.</span>
+    <v-footer
+      class="d-flex justify-center"
+      :absolute="!fixed"
+      app
+      color="accent"
+      height="72"
+    >
+      <span class="footer-text"
+        >&copy; {{ new Date().getFullYear() }}. All rights reserved.</span
+      >
     </v-footer>
   </v-app>
 </template>
@@ -23,7 +31,7 @@
   padding-left: 24px;
 }
 
-.footer-text{
+.footer-text {
   font-size: 16px;
   color: $gray;
 }
